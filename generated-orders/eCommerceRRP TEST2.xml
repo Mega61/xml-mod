@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderRequest>
+    <Datasource>prod</Datasource>
+    <NumberOfOrders>1</NumberOfOrders>
+    <Orders>
+        <Order>
+            <Shop>
+                <ShopNo>1</ShopNo>
+            </Shop>
+            <Header>
+                <Business>9190</Business>
+                <SalesChannel>01</SalesChannel>
+                <Division>01</Division>
+                <OrderType>ZTA</OrderType>
+                <OrderReason>R01</OrderReason>
+                <DispatchType>ND</DispatchType>
+                <PaymentType>Z006</PaymentType>
+                <OrderNo>13062210</OrderNo>
+                <TransNo></TransNo>
+                <OrderTimestamp>2022-06-13T02:54:00</OrderTimestamp>
+                <PaymentDetail>
+                    <PaymentToken></PaymentToken>
+                    <CreditCard></CreditCard>
+                    <CardOwner></CardOwner>
+                    <AuthAmount>72777.0000</AuthAmount>
+                    <AuthorisationCode></AuthorisationCode>
+                    <AuthorisationDate></AuthorisationDate>
+                    <AuthorisationTime></AuthorisationTime>
+                    <AuthorisationRef></AuthorisationRef>
+                </PaymentDetail>
+                <HeaderPrice>
+                    <Currency>COP</Currency>
+                    <HeaderNet>117647.06</HeaderNet>
+                    <HeaderNetOriginal>117647.06</HeaderNetOriginal>
+                    <HeaderGross>72777.0000</HeaderGross>
+                    <HeaderGrossOriginal>140000</HeaderGrossOriginal>
+                    <SubTotalGross>72777.0000</SubTotalGross>
+                    <HeaderVatRate>19.000</HeaderVatRate>
+                    <HeaderVatValue>22352.94</HeaderVatValue>
+                    <CarrierGross>0.00</CarrierGross>
+                    <HeaderDiscounts/>
+                </HeaderPrice>
+            </Header>
+            <Customer>
+                <CustomerNo>00973251</CustomerNo>
+                <CustomerTyp>B2C</CustomerTyp>
+                <IdentityTyp>Cédula de Ciudadanía</IdentityTyp>
+                <IdentityNo>745735727</IdentityNo>
+                <ShippingAndBillingEqual>01</ShippingAndBillingEqual>
+                <BillingAddress>
+                    <BillingFirstName>eCommRRP BILLING NAME</BillingFirstName>
+                    <BillingLastname>eCommRRP  BILLING LASTNAME</BillingLastname>
+                    <BillingCompany></BillingCompany>
+                    <BillingStreet>CALLE  71 #65 - 98 Apto 202 Barrio San Francisco</BillingStreet>
+                    <BillingStreetNo></BillingStreetNo>
+                    <BillingBuilding></BillingBuilding>
+                    <BillingDigicode></BillingDigicode>
+                    <BillingAddressExtension2>ATLANTICO</BillingAddressExtension2>
+                    <BillingAddressExtension1></BillingAddressExtension1>
+                    <BillingPoBox></BillingPoBox>
+                    <BillingZIP></BillingZIP>
+                    <BillingCity>BARRANQUILLA</BillingCity>
+                    <BillingRegion></BillingRegion>
+                    <BillingCountry>CO</BillingCountry>
+                    <BillingLanguage>es</BillingLanguage>
+                    <BillingEmail>otv_pruebas@yopmail.com</BillingEmail>
+                    <BillingTelNo>3105414567</BillingTelNo>
+                    <BillingBirthday>19810101</BillingBirthday>
+                </BillingAddress>
+                <ShippingAddress>
+                    <ShippingFirstName>eCommRRP SHIPPING NAME</ShippingFirstName>  
+                    <ShippingLastname>eCommRRP SHIPPING LASTNAME</ShippingLastname>
+                    <ShippingCompany></ShippingCompany>
+                    <ShippingStreet>TEST SHIPPING ADDRESS 1</ShippingStreet>
+                    <ShippingStreetNo></ShippingStreetNo>
+                    <ShippingBuilding></ShippingBuilding>
+                    <ShippingDigicode></ShippingDigicode>
+                    <ShippingAddressExtension2>BOGOTÁ</ShippingAddressExtension2>
+                    <ShippingAddressExtension1></ShippingAddressExtension1>
+                    <ShippingPoBox></ShippingPoBox>
+                    <ShippingZIP></ShippingZIP>
+                    <ShippingCity>BOGOTÁ</ShippingCity>
+                    <ShippingRegion></ShippingRegion>
+                    <ShippingCountry>CO</ShippingCountry>
+                    <ShippingLanguage>es</ShippingLanguage>
+                    <ShippingEmail>otv_pruebas@yopmail.com</ShippingEmail>
+                    <ShippingTelNo>3105414567</ShippingTelNo>
+                </ShippingAddress>
+            </Customer>
+        </Order>
+    </Orders>
+</OrderRequest>

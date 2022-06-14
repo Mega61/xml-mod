@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderRequest>
+    <Datasource>prod</Datasource>
+    <NumberOfOrders>1</NumberOfOrders>
+    <Orders>
+        <Order>
+            <Shop>
+                <ShopNo>1</ShopNo>
+            </Shop>
+            <Header>
+                <Business>9190</Business>
+                <SalesChannel>01</SalesChannel>
+                <Division>01</Division>
+                <OrderType>ZTA</OrderType>
+                <OrderReason>R01</OrderReason>
+                <DispatchType>ND</DispatchType>
+                <PaymentType>Z006</PaymentType>
+                <OrderNo>13062210</OrderNo>
+                <TransNo></TransNo>
+                <OrderTimestamp>2022-06-13T02:54:00</OrderTimestamp>
+                <PaymentDetail>
+                    <PaymentToken></PaymentToken>
+                    <CreditCard></CreditCard>
+                    <CardOwner></CardOwner>
+                    <AuthAmount>72777.0000</AuthAmount>
+                    <AuthorisationCode></AuthorisationCode>
+                    <AuthorisationDate></AuthorisationDate>
+                    <AuthorisationTime></AuthorisationTime>
+                    <AuthorisationRef></AuthorisationRef>
+                </PaymentDetail>
+                <HeaderPrice>
+                    <Currency>COP</Currency>
+                    <HeaderNet>117647.06</HeaderNet>
+                    <HeaderNetOriginal>117647.06</HeaderNetOriginal>
+                    <HeaderGross>72777.0000</HeaderGross>
+                    <HeaderGrossOriginal>140000</HeaderGrossOriginal>
+                    <SubTotalGross>72777.0000</SubTotalGross>
+                    <HeaderVatRate>19.000</HeaderVatRate>
+                    <HeaderVatValue>22352.94</HeaderVatValue>
+                    <CarrierGross>0.00</CarrierGross>
+                </HeaderPrice>
+            </Header>
+        </Order>
+    </Orders>
+</OrderRequest>
