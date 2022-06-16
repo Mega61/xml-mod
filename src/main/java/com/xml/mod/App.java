@@ -8,6 +8,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
+import com.xml.mod.factory.OrderFactory;
 import com.xml.mod.orderrequestcomponents.OrderRequest;
 import com.xml.mod.orderrequestcomponents.ordercomponents.Order;
 import com.xml.mod.orderrequestcomponents.ordercomponents.customercomponents.BillingAddress;
@@ -40,6 +41,44 @@ public class App {
                 marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
                 marshaller.setProperty("com.sun.xml.bind.xmlDeclaration", false);
                 marshaller.setProperty("com.sun.xml.bind.xmlHeaders", "<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+
+                OrderFactory.creatOrderRequest(
+                        "dataSource", 
+                        "numberOfOrders", 
+                        OrderFactory.creatOrder(
+                                OrderFactory.createShop(100), 
+                                OrderFactory.createHeader(
+                                        "business", 
+                                        "salesChannel", 
+                                        "division", 
+                                        "orderType", 
+                                        "orderReason", 
+                                        "dispatchType", 
+                                        "paymentType", 
+                                        "orderNo", 
+                                        "transNo", 
+                                        "orderTimestamp", 
+                                        OrderFactory.createPaymentDetail(
+                                                "paymentToken", 
+                                                "creditCard",
+                                                 "cardOwner",
+                                                  "authAmount",
+                                                   "authorisationCode", 
+                                                   "authorisationDate", 
+                                                   "authorisationTime", 
+                                                   "authorisationRef"), 
+                                        OrderFactory.createHeaderPrice(
+                                                "currency", 
+                                                "headerNet", 
+                                                "headerNetOriginal", 
+                                                "headerGross", 
+                                                "headerGrossOriginal",
+                                                 "subTotalGross",
+                                                  "headerVatRate", 
+                                                  "headerVatValue", 
+                                                  "carrierGross")), 
+                                OrderFactory.createCustomer("custumerNo", customerTyp, identityTyp, identityNo, shippingAndBillingEqual, billingAddress, shippingAddress), 
+                                items));
 
                 OrderRequest orderRequest = new OrderRequest(
                         "prod",

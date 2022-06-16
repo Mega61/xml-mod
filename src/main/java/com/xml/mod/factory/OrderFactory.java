@@ -17,7 +17,7 @@ import com.xml.mod.orderrequestcomponents.ordercomponents.shopcomponents.Shop;
 public class OrderFactory {
 
     // Objeto global de la orden
-    public OrderRequest creatOrderRequest(String dataSource, int numberOfOrders, Order orders) {
+    public static OrderRequest creatOrderRequest(String dataSource, int numberOfOrders, Order orders) {
 
         OrderRequest orderRequest = new OrderRequest(dataSource, numberOfOrders);
 
@@ -28,7 +28,7 @@ public class OrderFactory {
     }
 
     // Sub objeto global de la orden contiene 3 bloques
-    public Order creatOrder(Shop shop, Header header, Customer customer, List<Item> items) {
+    public static Order creatOrder(Shop shop, Header header, Customer customer, List<Item> items) {
 
         Order order = new Order();
 
@@ -45,14 +45,14 @@ public class OrderFactory {
     }
 
     // Bloque 1 de Order
-    public Shop createShop(int shopNo) {
+    public static Shop createShop(int shopNo) {
         return new Shop(shopNo);
     }
 
     // --------------------------------------------------------------------------------------------
     // Header
     // Bloque 2 de Order
-    public Header createHeader(String business, String salesChannel, String division, String orderType,
+    public static Header createHeader(String business, String salesChannel, String division, String orderType,
             String orderReason, String dispatchType, String paymentType, String orderNo, String transNo,
             String orderTimestamp, PaymentDetail paymentDetail, HeaderPrice headerPrice) {
 
@@ -68,7 +68,7 @@ public class OrderFactory {
     }
 
     // Bloque 1 de Header
-    public PaymentDetail createPaymentDetail(String paymentToken, String creditCard, String cardOwner,
+    public static PaymentDetail createPaymentDetail(String paymentToken, String creditCard, String cardOwner,
             String authAmount, String authorisationCode, String authorisationDate, String authorisationTime,
             String authorisationRef) {
         return new PaymentDetail(paymentToken, creditCard, cardOwner, authAmount, authorisationCode, authorisationDate,
@@ -76,7 +76,7 @@ public class OrderFactory {
     }
 
     // Bloque 2 de Header
-    public HeaderPrice createHeaderPrice(String currency, String headerNet, String headerNetOriginal,
+    public static HeaderPrice createHeaderPrice(String currency, String headerNet, String headerNetOriginal,
             String headerGross, String headerGrossOriginal, String subTotalGross, String headerVatRate,
             String headerVatValue, String carrierGross) {
         return new HeaderPrice(currency, headerNet, headerNetOriginal, headerGross, headerGrossOriginal, subTotalGross,
@@ -87,7 +87,7 @@ public class OrderFactory {
     // --------------------------------------------------------------------------------------------
     // Customer
     // Bloque 3 de Order
-    public Customer createCustomer(String custumerNo, String customerTyp, String identityTyp, String identityNo,
+    public static Customer createCustomer(String custumerNo, String customerTyp, String identityTyp, String identityNo,
             String shippingAndBillingEqual, BillingAddress billingAddress, ShippingAddress shippingAddress) {
         Customer customer = new Customer(custumerNo, customerTyp, identityTyp, identityNo, shippingAndBillingEqual);
 
@@ -97,7 +97,7 @@ public class OrderFactory {
         return customer;
     }
 
-    public BillingAddress createBillingAddress(String billingFirstName, String billingLastname, String billingCompany,
+    public static BillingAddress createBillingAddress(String billingFirstName, String billingLastname, String billingCompany,
             String billingStreet, String billingStreetNo, String billingBuilding, String billingDigicode,
             String billingAddressExtension2, String billingAddressExtension1, String billingPoBox, String billingZIP,
             String billingCity, String billingRegion, String billingCountry, String billingLanguage,
@@ -108,7 +108,7 @@ public class OrderFactory {
                 billingBirthday);
     }
 
-    public ShippingAddress createShippingAddress(String shippingFirstName, String shippingLastname,
+    public static ShippingAddress createShippingAddress(String shippingFirstName, String shippingLastname,
             String shippingCompany, String shippingStreet, String shippingStreetNo, String shippingBuilding,
             String shippingDigicode, String shippingAddressExtension2, String shippingAddressExtension1,
             String shippingPoBox, String shippingZIP, String shippingCity, String shippingRegion,
@@ -123,7 +123,7 @@ public class OrderFactory {
 
     // --------------------------------------------------------------------------------------------
     // Item
-    public Item creaItem(String deliveryItemNumber, String orderItemType, String orderAvailDateItem, String articleNo,
+    public static Item creaItem(String deliveryItemNumber, String orderItemType, String orderAvailDateItem, String articleNo,
             String salesText, String serial, String gCRSTicketNo, String quantity, String quantityUnit,
             String stockAssign, String itemNet, String itemNetOriginal, String itemNetPerUnit,
             String itemNetPerUnitOriginal, String itemGross, String itemGrossOriginal, String itemGrossPerUnit,
@@ -137,7 +137,7 @@ public class OrderFactory {
         return item;
     }
 
-    public ItemVat creaItemVat(String itemVatRate, String itemVatValue, String originalItemVatPerUnit,
+    public static ItemVat creaItemVat(String itemVatRate, String itemVatValue, String originalItemVatPerUnit,
             String itemVatPerUnit, String originalItemVatValue) {
         return new ItemVat(itemVatRate, itemVatValue, originalItemVatValue, itemVatPerUnit, originalItemVatPerUnit);
     }

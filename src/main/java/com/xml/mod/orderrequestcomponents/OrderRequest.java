@@ -1,7 +1,6 @@
 package com.xml.mod.orderrequestcomponents;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlElement;
