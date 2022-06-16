@@ -68,7 +68,7 @@
                     <BillingBirthday>19810101</BillingBirthday>
                 </BillingAddress>
                 <ShippingAddress>
-                    <ShippingFirstName>eCommRRP SHIPPING NAME</ShippingFirstName>  
+                    <ShippingFirstName>eCommRRP SHIPPING NAME</ShippingFirstName>
                     <ShippingLastname>eCommRRP SHIPPING LASTNAME</ShippingLastname>
                     <ShippingCompany></ShippingCompany>
                     <ShippingStreet>TEST SHIPPING ADDRESS 1</ShippingStreet>
@@ -87,6 +87,36 @@
                     <ShippingTelNo>3105414567</ShippingTelNo>
                 </ShippingAddress>
             </Customer>
+            <Items>
+                <Item>
+                    <DeliveryItemNumber>1</DeliveryItemNumber>
+                    <OrderItemType></OrderItemType>
+                    <OrderAvailDateItem></OrderAvailDateItem>
+                    <ArticleNo>ME001232.00</ArticleNo>
+                    <SalesText>HEETS Turquoise Selection (cartón)</SalesText>
+                    <Serial></Serial>
+                    <GCRSTicketNo></GCRSTicketNo>
+                    <Quantity>1</Quantity>
+                    <QuantityUnit></QuantityUnit>
+                    <StockAssign>3010</StockAssign>
+                    <ItemNet>117647.06</ItemNet>
+                    <ItemNetOriginal>117647.06</ItemNetOriginal>
+                    <ItemNetPerUnit>58823.53</ItemNetPerUnit>
+                    <ItemNetPerUnitOriginal>58823.53</ItemNetPerUnitOriginal>
+                    <ItemGross>75000.0000</ItemGross>
+                    <ItemGrossOriginal>75000.0000</ItemGrossOriginal>
+                    <ItemGrossPerUnit>75000.0000</ItemGrossPerUnit>
+                    <ItemGrossPerUnitOriginal>75000.0000</ItemGrossPerUnitOriginal>
+                    <ItemDiscounts/>
+                    <ItemVat>
+                        <ItemVatRate>19.000</ItemVatRate>
+                        <ItemVatValue>22352.94</ItemVatValue>
+                        <OriginalItemVatValue>22352.94</OriginalItemVatValue>
+                        <ItemVatPerUnit>11176.47</ItemVatPerUnit>
+                        <OriginalItemVatPerUnit>11176.47</OriginalItemVatPerUnit>
+                    </ItemVat>
+                </Item>
+            </Items>
         </Order>
     </Orders>
 </OrderRequest>

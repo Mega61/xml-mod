@@ -1,6 +1,7 @@
 package com.xml.mod.orderrequestcomponents;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -58,7 +59,9 @@ public class OrderRequest {
     @Override
     public String toString() {
         return "eCommerceRRP{" +
-                "Datasource='" + dataSource + '\'';
+                "Datasource='" + dataSource + '\''+
+                "NumberOfOrders='" + numberOfOrders + '\''+
+                "Orders='";
     }
 
 }

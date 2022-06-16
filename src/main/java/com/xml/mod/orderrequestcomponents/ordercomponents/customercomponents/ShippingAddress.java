@@ -21,7 +21,7 @@ public class ShippingAddress {
     private String shippingAddressExtension2;
     private String shippingAddressExtension1;
     private String shippingPoBox;
-    private String ShippingZIP;
+    private String shippingZIP;
     private String shippingCity;
     private String shippingRegion;
     private String shippingCountry;
@@ -35,7 +35,7 @@ public class ShippingAddress {
     public ShippingAddress(String shippingFirstName, String shippingLastname, String shippingCompany,
             String shippingStreet, String shippingStreetNo, String shippingBuilding, String shippingDigicode,
             String shippingAddressExtension2, String shippingAddressExtension1, String shippingPoBox,
-            String ShippingZIP, String shippingCity, String shippingRegion, String shippingCountry,
+            String shippingZIP, String shippingCity, String shippingRegion, String shippingCountry,
             String shippingLanguage, String shippingEmail, String shippingTelNo) {
         this.shippingFirstName = shippingFirstName;
         this.shippingLastname = shippingLastname;
@@ -47,7 +47,7 @@ public class ShippingAddress {
         this.shippingAddressExtension2 = shippingAddressExtension2;
         this.shippingAddressExtension1 = shippingAddressExtension1;
         this.shippingPoBox = shippingPoBox;
-        this.ShippingZIP = ShippingZIP;
+        this.shippingZIP = shippingZIP;
         this.shippingCity = shippingCity;
         this.shippingRegion = shippingRegion;
         this.shippingCountry = shippingCountry;
@@ -150,13 +150,13 @@ public class ShippingAddress {
         return this.shippingCity;
     }
 
-    public String getShippingZIP() {
-        return this.ShippingZIP;
+    public String getshippingZIP() {
+        return this.shippingZIP;
     }
 
     @XmlElement(name = "ShippingZIP")
-    public void setShippingZIP(String ShippingZIP) {
-        this.ShippingZIP = ShippingZIP;
+    public void setshippingZIP(String shippingZIP) {
+        this.shippingZIP = shippingZIP;
     }
 
     @XmlElement(name = "ShippingCity")

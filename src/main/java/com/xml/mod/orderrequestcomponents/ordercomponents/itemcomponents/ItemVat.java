@@ -2,8 +2,11 @@ package com.xml.mod.orderrequestcomponents.ordercomponents.itemcomponents;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 @XmlRootElement
+@XmlType(propOrder = { "itemVatRate", "itemVatValue", "originalItemVatValue", "itemVatPerUnit",
+        "originalItemVatPerUnit" })
 public class ItemVat {
 
     private String itemVatRate;

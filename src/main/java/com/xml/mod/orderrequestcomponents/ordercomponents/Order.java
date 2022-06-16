@@ -14,7 +14,7 @@ import com.xml.mod.orderrequestcomponents.ordercomponents.itemcomponents.Item;
 import com.xml.mod.orderrequestcomponents.ordercomponents.shopcomponents.Shop;
 
 @XmlRootElement
-@XmlType(propOrder = {"shops","headers", "customers"})
+@XmlType(propOrder = {"shops","headers", "customers","items"})
 public class Order {
 
     private List<Shop> shops = new ArrayList<>();

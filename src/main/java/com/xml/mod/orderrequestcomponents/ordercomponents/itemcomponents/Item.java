@@ -119,12 +119,12 @@ public class Item {
         this.serial = serial;
     }
 
-    public String getGCRSTicketNo() {
+    public String getgCRSTicketNo() {
         return this.gCRSTicketNo;
     }
 
     @XmlElement(name = "GCRSTicketNo")
-    public void setGCRSTicketNo(String gCRSTicketNo) {
+    public void setgCRSTicketNo(String gCRSTicketNo) {
         this.gCRSTicketNo = gCRSTicketNo;
     }
 
@@ -241,7 +241,7 @@ public class Item {
         return this.itemVat;
     }
 
-    @XmlElement(name = "DeliveryItemNumber")
+    @XmlElement(name = "ItemVat")
     public void setItemVat(List<ItemVat> itemVat) {
         this.itemVat = itemVat;
     }

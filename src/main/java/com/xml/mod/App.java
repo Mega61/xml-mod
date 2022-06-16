@@ -17,6 +17,7 @@ import com.xml.mod.orderrequestcomponents.ordercomponents.headercomponents.Heade
 import com.xml.mod.orderrequestcomponents.ordercomponents.headercomponents.HeaderPrice;
 import com.xml.mod.orderrequestcomponents.ordercomponents.headercomponents.PaymentDetail;
 import com.xml.mod.orderrequestcomponents.ordercomponents.itemcomponents.Item;
+import com.xml.mod.orderrequestcomponents.ordercomponents.itemcomponents.ItemVat;
 import com.xml.mod.orderrequestcomponents.ordercomponents.shopcomponents.Shop;
 
 /**
@@ -26,7 +27,8 @@ import com.xml.mod.orderrequestcomponents.ordercomponents.shopcomponents.Shop;
 public class App {
     public static void main(String[] args) {
         int decider = 0;
-        decider = Integer.parseInt(JOptionPane.showInputDialog(null, "1. Marshalling \n2. Unmarshalling "));
+        decider = Integer
+                .parseInt(JOptionPane.showInputDialog(null, "1. Marshalling \n2. Unmarshalling \n3. Modify XML"));
         if (decider == 1) {
             try {
                 File file = new File("generated-orders/eCommerceRRP TEST2.xml");
@@ -125,24 +127,31 @@ public class App {
                         "3105414567");
 
                 Item item = new Item(
-                        "deliveryItemNumber",
-                        "orderItemType",
-                        "orderAvailDateItem",
-                        "articleNo",
-                        "salesText",
-                        "serial",
-                        "gCRSTicketNo",
-                        "quantity",
-                        "quantityUnit",
-                        "stockAssign",
-                        "itemNet",
-                        "itemNetOriginal",
-                        "itemNetPerUnit",
-                        "itemNetPerUnitOriginal",
-                        "itemGross",
-                        "itemGrossOriginal",
-                        "itemGrossPerUnit",
-                        "itemGrossPerUnitOriginal");
+                        "1",
+                        "",
+                        "",
+                        "ME001232.00",
+                        "HEETS Turquoise Selection (cartón)",
+                        "",
+                        "",
+                        "1",
+                        "",
+                        "3010",
+                        "117647.06",
+                        "117647.06",
+                        "58823.53",
+                        "58823.53",
+                        "75000.0000",
+                        "75000.0000",
+                        "75000.0000",
+                        "75000.0000");
+
+                ItemVat itemVat = new ItemVat(
+                        "19.000",
+                        "22352.94",
+                        "22352.94",
+                        "11176.47",
+                        "11176.47");
 
                 header.getPaymentDetails().add(paymentDetail);
                 header.getHeaderPrices().add(headerPrice);
@@ -150,9 +159,12 @@ public class App {
                 customer.getBillingAddresses().add(billingAddress);
                 customer.getShippingAdresses().add(shippingAddress);
 
+                item.getItemVat().add(itemVat);
+
                 order.getShops().add(shop);
                 order.getHeaders().add(header);
                 order.getCustomers().add(customer);
+                order.getItems().add(item);
 
                 orderRequest.getOrders().add(order);
 
@@ -181,27 +193,49 @@ public class App {
 
             JOptionPane.showMessageDialog(null, "Lectura de XML completada");
         } else if (decider == 3) {
-            try {
-                File file = new File("read-orders/eCommRRP.xml");
-                File saveFile = new File("read-orders/eCommRRPTEST1.xml");
+            for (int i = 1; i < 71; i++) {
+                try {
 
-                JAXBContext context = JAXBContext.newInstance(OrderRequest.class);
+                    File file = new File("read-orders/Original/orderSC (" + i + ").xml");
 
-                Unmarshaller unmarshaller = context.createUnmarshaller();
+                    JAXBContext context = JAXBContext.newInstance(OrderRequest.class);
 
-                OrderRequest orderRequest = (OrderRequest) unmarshaller.unmarshal(file);
+                    Unmarshaller unmarshaller = context.createUnmarshaller();
 
-                orderRequest.setDataSource("PRUEBA1000");
-                orderRequest.setNumberOfOrders(1000000);
+                    OrderRequest orderRequest = (OrderRequest) unmarshaller.unmarshal(file);
 
-                Marshaller marshaller = context.createMarshaller();
-                marshaller.marshal(orderRequest, saveFile);
+                    File saveFile = new File("read-orders/Modified/Premium Delivery/order_SC"
+                            + orderRequest.getOrders().get(0).getHeaders().get(0).getOrderNo() + ".xml");
 
-                JOptionPane.showMessageDialog(null, "Modificación exitosa");
+                    orderRequest.getOrders().get(0).getCustomers().get(0).getBillingAddresses().get(0)
+                            .setBillingEmail("diana.gomez@pmi.com");
+                    orderRequest.getOrders().get(0).getCustomers().get(0).getBillingAddresses().get(0)
+                            .setBillingTelNo("3146170237");
 
-            } catch (JAXBException e) {
-                e.printStackTrace();
+                    orderRequest.getOrders().get(0).getCustomers().get(0).getShippingAdresses().get(0)
+                            .setShippingEmail("diana.gomez@pmi.com");
+                    orderRequest.getOrders().get(0).getCustomers().get(0).getShippingAdresses().get(0)
+                            .setShippingTelNo("3146170237");
+
+                    orderRequest.getOrders().get(0).getHeaders().get(0).setOrderTimestamp("2022-06-15T12:00:00");
+
+                    Marshaller marshaller = context.createMarshaller();
+                    marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+                    marshaller.setProperty("com.sun.xml.bind.xmlDeclaration", false);
+                    marshaller.setProperty("com.sun.xml.bind.xmlHeaders", "<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+
+                    marshaller.marshal(orderRequest, saveFile);
+
+                    System.out.println("Order " + orderRequest.getOrders().get(0).getHeaders().get(0).getOrderNo()
+                            + " Modificada - Iteración " + i);
+
+                } catch (JAXBException e) {
+                    e.printStackTrace();
+                    System.out.println("Iteración " + i + " fallida");
+                }
             }
+            JOptionPane.showMessageDialog(null, "Modificación exitosa");
+
         } else {
             JOptionPane.showMessageDialog(null, "Error no se ha ingresado un valor correcto");
         }
