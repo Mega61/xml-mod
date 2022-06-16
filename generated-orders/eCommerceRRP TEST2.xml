@@ -14,15 +14,15 @@
                 <OrderType>ZTA</OrderType>
                 <OrderReason>R01</OrderReason>
                 <DispatchType>ND</DispatchType>
-                <PaymentType>Z006</PaymentType>
-                <OrderNo>13062210</OrderNo>
+                <PaymentType>Z098</PaymentType>
+                <OrderNo>SC1002906810</OrderNo>
                 <TransNo></TransNo>
-                <OrderTimestamp>2022-06-13T02:54:00</OrderTimestamp>
+                <OrderTimestamp>2022-06-15T12:00:00</OrderTimestamp>
                 <PaymentDetail>
                     <PaymentToken></PaymentToken>
                     <CreditCard></CreditCard>
                     <CardOwner></CardOwner>
-                    <AuthAmount>72777.0000</AuthAmount>
+                    <AuthAmount>300000</AuthAmount>
                     <AuthorisationCode></AuthorisationCode>
                     <AuthorisationDate></AuthorisationDate>
                     <AuthorisationTime></AuthorisationTime>
@@ -30,61 +30,61 @@
                 </PaymentDetail>
                 <HeaderPrice>
                     <Currency>COP</Currency>
-                    <HeaderNet>117647.06</HeaderNet>
-                    <HeaderNetOriginal>117647.06</HeaderNetOriginal>
-                    <HeaderGross>72777.0000</HeaderGross>
-                    <HeaderGrossOriginal>140000</HeaderGrossOriginal>
-                    <SubTotalGross>72777.0000</SubTotalGross>
-                    <HeaderVatRate>19.000</HeaderVatRate>
-                    <HeaderVatValue>22352.94</HeaderVatValue>
+                    <HeaderNet>300000</HeaderNet>
+                    <HeaderNetOriginal>300000</HeaderNetOriginal>
+                    <HeaderGross>300000</HeaderGross>
+                    <HeaderGrossOriginal>300000</HeaderGrossOriginal>
+                    <SubTotalGross>300000</SubTotalGross>
+                    <HeaderVatRate>19</HeaderVatRate>
+                    <HeaderVatValue>60733.748</HeaderVatValue>
                     <CarrierGross>0.00</CarrierGross>
                     <HeaderDiscounts/>
                 </HeaderPrice>
             </Header>
             <Customer>
-                <CustomerNo>00973251</CustomerNo>
+                <CustomerNo>00097570</CustomerNo>
                 <CustomerTyp>B2C</CustomerTyp>
-                <IdentityTyp>Cédula de Ciudadanía</IdentityTyp>
-                <IdentityNo>745735727</IdentityNo>
+                <IdentityTyp>Cedula de Ciudadania</IdentityTyp>
+                <IdentityNo>427633611</IdentityNo>
                 <ShippingAndBillingEqual>01</ShippingAndBillingEqual>
                 <BillingAddress>
-                    <BillingFirstName>eCommRRP BILLING NAME</BillingFirstName>
-                    <BillingLastname>eCommRRP  BILLING LASTNAME</BillingLastname>
+                    <BillingFirstName>LUZ</BillingFirstName>
+                    <BillingLastname>RESTREPO</BillingLastname>
                     <BillingCompany></BillingCompany>
-                    <BillingStreet>CALLE  71 #65 - 98 Apto 202 Barrio San Francisco</BillingStreet>
+                    <BillingStreet>CR 27 D No 34DD SUR-44 AP 801 ED REFUGIO VERDE BR LA INMACULADA</BillingStreet>
                     <BillingStreetNo></BillingStreetNo>
                     <BillingBuilding></BillingBuilding>
                     <BillingDigicode></BillingDigicode>
-                    <BillingAddressExtension2>ATLANTICO</BillingAddressExtension2>
+                    <BillingAddressExtension2>ANTIOQUIA</BillingAddressExtension2>
                     <BillingAddressExtension1></BillingAddressExtension1>
                     <BillingPoBox></BillingPoBox>
                     <BillingZIP></BillingZIP>
-                    <BillingCity>BARRANQUILLA</BillingCity>
+                    <BillingCity>ENVIGADO</BillingCity>
                     <BillingRegion></BillingRegion>
                     <BillingCountry>CO</BillingCountry>
                     <BillingLanguage>es</BillingLanguage>
-                    <BillingEmail>otv_pruebas@yopmail.com</BillingEmail>
-                    <BillingTelNo>3105414567</BillingTelNo>
-                    <BillingBirthday>19810101</BillingBirthday>
+                    <BillingEmail>jdazap@choucairtesting.com</BillingEmail>
+                    <BillingTelNo>3204514446</BillingTelNo>
+                    <BillingBirthday>19640625</BillingBirthday>
                 </BillingAddress>
                 <ShippingAddress>
-                    <ShippingFirstName>eCommRRP SHIPPING NAME</ShippingFirstName>
-                    <ShippingLastname>eCommRRP SHIPPING LASTNAME</ShippingLastname>
+                    <ShippingFirstName>LUZ</ShippingFirstName>
+                    <ShippingLastname>RESTREPO</ShippingLastname>
                     <ShippingCompany></ShippingCompany>
-                    <ShippingStreet>TEST SHIPPING ADDRESS 1</ShippingStreet>
+                    <ShippingStreet>CR 27 D No 34DD SUR-44 AP 801 ED REFUGIO VERDE BR LA INMACULADA</ShippingStreet>
                     <ShippingStreetNo></ShippingStreetNo>
-                    <ShippingBuilding></ShippingBuilding>
+                    <ShippingBuilding>Edificio</ShippingBuilding>
                     <ShippingDigicode></ShippingDigicode>
-                    <ShippingAddressExtension2>BOGOTÁ</ShippingAddressExtension2>
+                    <ShippingAddressExtension2>ANTIOQUIA</ShippingAddressExtension2>
                     <ShippingAddressExtension1></ShippingAddressExtension1>
                     <ShippingPoBox></ShippingPoBox>
                     <ShippingZIP></ShippingZIP>
-                    <ShippingCity>BOGOTÁ</ShippingCity>
+                    <ShippingCity>ENVIGADO</ShippingCity>
                     <ShippingRegion></ShippingRegion>
                     <ShippingCountry>CO</ShippingCountry>
                     <ShippingLanguage>es</ShippingLanguage>
-                    <ShippingEmail>otv_pruebas@yopmail.com</ShippingEmail>
-                    <ShippingTelNo>3105414567</ShippingTelNo>
+                    <ShippingEmail>jdazap@choucairtesting.com</ShippingEmail>
+                    <ShippingTelNo>3146170237</ShippingTelNo>
                 </ShippingAddress>
             </Customer>
             <Items>
@@ -92,28 +92,28 @@
                     <DeliveryItemNumber>1</DeliveryItemNumber>
                     <OrderItemType></OrderItemType>
                     <OrderAvailDateItem></OrderAvailDateItem>
-                    <ArticleNo>ME001232.00</ArticleNo>
-                    <SalesText>HEETS Turquoise Selection (cartón)</SalesText>
-                    <Serial></Serial>
+                    <ArticleNo>ME001231.08</ArticleNo>
+                    <SalesText>HEETS AMBERSEL S50 PRI 20 SLI</SalesText>
+                    <Serial>ME001231.08</Serial>
                     <GCRSTicketNo></GCRSTicketNo>
-                    <Quantity>1</Quantity>
+                    <Quantity>4</Quantity>
                     <QuantityUnit></QuantityUnit>
                     <StockAssign>3010</StockAssign>
-                    <ItemNet>117647.06</ItemNet>
-                    <ItemNetOriginal>117647.06</ItemNetOriginal>
-                    <ItemNetPerUnit>58823.53</ItemNetPerUnit>
-                    <ItemNetPerUnitOriginal>58823.53</ItemNetPerUnitOriginal>
-                    <ItemGross>75000.0000</ItemGross>
-                    <ItemGrossOriginal>75000.0000</ItemGrossOriginal>
-                    <ItemGrossPerUnit>75000.0000</ItemGrossPerUnit>
-                    <ItemGrossPerUnitOriginal>75000.0000</ItemGrossPerUnitOriginal>
+                    <ItemNet>132709.2</ItemNet>
+                    <ItemNetOriginal>132709.2</ItemNetOriginal>
+                    <ItemNetPerUnit>132709.2</ItemNetPerUnit>
+                    <ItemNetPerUnitOriginal>132709.2</ItemNetPerUnitOriginal>
+                    <ItemGross>300000</ItemGross>
+                    <ItemGrossOriginal>300000</ItemGrossOriginal>
+                    <ItemGrossPerUnit>75000</ItemGrossPerUnit>
+                    <ItemGrossPerUnitOriginal>75000</ItemGrossPerUnitOriginal>
                     <ItemDiscounts/>
                     <ItemVat>
-                        <ItemVatRate>19.000</ItemVatRate>
-                        <ItemVatValue>22352.94</ItemVatValue>
-                        <OriginalItemVatValue>22352.94</OriginalItemVatValue>
-                        <ItemVatPerUnit>11176.47</ItemVatPerUnit>
-                        <OriginalItemVatPerUnit>11176.47</OriginalItemVatPerUnit>
+                        <ItemVatRate>19</ItemVatRate>
+                        <ItemVatValue>25214.748</ItemVatValue>
+                        <OriginalItemVatValue>25214.748</OriginalItemVatValue>
+                        <ItemVatPerUnit>25214.748</ItemVatPerUnit>
+                        <OriginalItemVatPerUnit>300000</OriginalItemVatPerUnit>
                     </ItemVat>
                 </Item>
             </Items>
