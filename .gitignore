@@ -3,5 +3,5 @@
 *read-orders/
 *generated-orders/
 
-!xml.gitignore
+!.gitignore
 
