@@ -1,4 +1,7 @@
-.vscode/
+*.vscode/
 
-read-orders/
-generated-orders/
+*read-orders/
+*generated-orders/
+
+!xml.gitignore
+
