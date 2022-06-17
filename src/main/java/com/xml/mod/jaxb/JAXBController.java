@@ -1,4 +1,4 @@
-package jaxb;
+package com.xml.mod.jaxb;
 
 import java.io.File;
 

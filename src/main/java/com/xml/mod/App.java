@@ -7,10 +7,9 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 import com.xml.mod.factory.OrderFactory;
+import com.xml.mod.jaxb.JAXBController;
 import com.xml.mod.orderrequestcomponents.OrderRequest;
 import com.xml.mod.orderrequestcomponents.ordercomponents.itemcomponents.Item;
-
-import jaxb.JAXBController;
 
 public class App {
         public static void main(String[] args) {
