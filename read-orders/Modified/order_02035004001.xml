@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderRequest>
+    <Datasource>prod</Datasource>
+    <NumberOfOrders>1</NumberOfOrders>
+    <Orders>
+        <Order>
+            <Shop>
+                <ShopNo>1</ShopNo>
+            </Shop>
+            <Header>
+                <Business>9190</Business>
+                <SalesChannel>01</SalesChannel>
+                <Division>01</Division>
+                <OrderType>ZTA</OrderType>
+                <OrderReason>R01</OrderReason>
+                <DispatchType>ND</DispatchType>
+                <PaymentType>Z004</PaymentType>
+                <OrderNo>02035004001</OrderNo>
+                <TransNo></TransNo>
+                <OrderTimestamp>2022-06-15T12:00:00</OrderTimestamp>
+                <PaymentDetail>
+                    <PaymentToken>cc9dfd4c-e56f-4228-aa66-eac9a460cc05</PaymentToken>
+                    <CreditCard></CreditCard>
+                    <CardOwner></CardOwner>
+                    <AuthAmount>75000.00</AuthAmount>
+                    <AuthorisationCode></AuthorisationCode>
+                    <AuthorisationDate></AuthorisationDate>
+                    <AuthorisationTime></AuthorisationTime>
+                    <AuthorisationRef></AuthorisationRef>
+                </PaymentDetail>
+                <HeaderPrice>
+                    <Currency>COP</Currency>
+                    <HeaderNet>63025.21</HeaderNet>
+                    <HeaderNetOriginal>63025.21</HeaderNetOriginal>
+                    <HeaderGross>75000.00</HeaderGross>
+                    <HeaderGrossOriginal>75000</HeaderGrossOriginal>
+                    <SubTotalGross>75000.00</SubTotalGross>
+                    <HeaderVatRate>19.000</HeaderVatRate>
+                    <HeaderVatValue>11974.79</HeaderVatValue>
+                    <CarrierGross>0.00</CarrierGross>
+                    <HeaderDiscounts/>
+                </HeaderPrice>
+            </Header>
+            <Customer>
+                <CustomerNo>01258939</CustomerNo>
+                <CustomerTyp>B2C</CustomerTyp>
+                <IdentityTyp>Cédula de Ciudadanía</IdentityTyp>
+                <IdentityNo>71294778</IdentityNo>
+                <ShippingAndBillingEqual>01</ShippingAndBillingEqual>
+                <BillingAddress>
+                    <BillingFirstName>Daniel</BillingFirstName>
+                    <BillingLastname>Hernandez Ospina</BillingLastname>
+                    <BillingCompany></BillingCompany>
+                    <BillingStreet>Cr 16A No. 79-13</BillingStreet>
+                    <BillingStreetNo></BillingStreetNo>
+                    <BillingBuilding>Barrio San Fernando (Guayabal)</BillingBuilding>
+                    <BillingDigicode></BillingDigicode>
+                    <BillingAddressExtension2>Antioquia</BillingAddressExtension2>
+                    <BillingAddressExtension1></BillingAddressExtension1>
+                    <BillingPoBox></BillingPoBox>
+                    <BillingZIP></BillingZIP>
+                    <BillingCity>Itagui</BillingCity>
+                    <BillingRegion></BillingRegion>
+                    <BillingCountry>CO</BillingCountry>
+                    <BillingLanguage>es</BillingLanguage>
+                    <BillingEmail>diana.gomez@pmi.com</BillingEmail>
+                    <BillingTelNo>3146170237</BillingTelNo>
+                    <BillingBirthday>19850828</BillingBirthday>
+                </BillingAddress>
+                <ShippingAddress>
+                    <ShippingFirstName>Daniel</ShippingFirstName>
+                    <ShippingLastname>Hernandez Ospina</ShippingLastname>
+                    <ShippingCompany></ShippingCompany>
+                    <ShippingStreet>Cr 16A No. 79-13</ShippingStreet>
+                    <ShippingStreetNo></ShippingStreetNo>
+                    <ShippingBuilding>Barrio San Fernando (Guayabal)</ShippingBuilding>
+                    <ShippingDigicode></ShippingDigicode>
+                    <ShippingAddressExtension2>Antioquia</ShippingAddressExtension2>
+                    <ShippingAddressExtension1></ShippingAddressExtension1>
+                    <ShippingPoBox></ShippingPoBox>
+                    <ShippingZIP></ShippingZIP>
+                    <ShippingCity>Itagui</ShippingCity>
+                    <ShippingRegion></ShippingRegion>
+                    <ShippingCountry>CO</ShippingCountry>
+                    <ShippingLanguage>es</ShippingLanguage>
+                    <ShippingEmail>diana.gomez@pmi.com</ShippingEmail>
+                    <ShippingTelNo>3146170237</ShippingTelNo>
+                </ShippingAddress>
+            </Customer>
+            <Items>
+                <Item>
+                    <DeliveryItemNumber>1</DeliveryItemNumber>
+                    <OrderItemType></OrderItemType>
+                    <OrderAvailDateItem></OrderAvailDateItem>
+                    <ArticleNo>ME001231.00</ArticleNo>
+                    <SalesText>HEETS Amber Selection (cartón)</SalesText>
+                    <Serial></Serial>
+                    <GCRSTicketNo></GCRSTicketNo>
+                    <Quantity>1</Quantity>
+                    <QuantityUnit></QuantityUnit>
+                    <StockAssign>3010</StockAssign>
+                    <ItemNet>63025.21</ItemNet>
+                    <ItemNetOriginal>63025.21</ItemNetOriginal>
+                    <ItemNetPerUnit>63025.21</ItemNetPerUnit>
+                    <ItemNetPerUnitOriginal>63025.21</ItemNetPerUnitOriginal>
+                    <ItemGross>75000.00</ItemGross>
+                    <ItemGrossOriginal>75000.00</ItemGrossOriginal>
+                    <ItemGrossPerUnit>75000.00</ItemGrossPerUnit>
+                    <ItemGrossPerUnitOriginal>75000.00</ItemGrossPerUnitOriginal>
+                    <ItemDiscounts/>
+                    <ItemVat>
+                        <ItemVatRate>19.000</ItemVatRate>
+                        <ItemVatValue>11974.79</ItemVatValue>
+                        <OriginalItemVatValue>11974.79</OriginalItemVatValue>
+                        <ItemVatPerUnit>11974.79</ItemVatPerUnit>
+                        <OriginalItemVatPerUnit>11974.79</OriginalItemVatPerUnit>
+                    </ItemVat>
+                </Item>
+            </Items>
+        </Order>
+    </Orders>
+</OrderRequest>

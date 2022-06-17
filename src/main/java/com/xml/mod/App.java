@@ -5,19 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JOptionPane;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
 
 import com.xml.mod.factory.OrderFactory;
 import com.xml.mod.orderrequestcomponents.OrderRequest;
 import com.xml.mod.orderrequestcomponents.ordercomponents.itemcomponents.Item;
 
-/**
- * Hello world!
- *
- */
+import jaxb.JAXBController;
+
 public class App {
         public static void main(String[] args) {
                 int decider = 0;
@@ -25,201 +19,167 @@ public class App {
                                 .parseInt(JOptionPane.showInputDialog(null,
                                                 "1. Marshalling \n2. Unmarshalling \n3. Modify XML"));
                 if (decider == 1) {
-                        try {
-                                List<Item> items = new ArrayList<>();
 
-                                File file = new File("generated-orders/eCommerceRRP TEST2.xml");
+                        List<Item> items = new ArrayList<>();
 
-                                JAXBContext context = JAXBContext.newInstance(OrderRequest.class);
+                        File file = new File("generated-orders/eCommerceRRP TEST3.xml");
 
-                                Marshaller marshaller = context.createMarshaller();
+                        items.add((OrderFactory.creaItem(
+                                        "1",
+                                        "",
+                                        "",
+                                        "ME001231.08",
+                                        "HEETS AMBERSEL S50 PRI 20 SLI",
+                                        "ME001231.08",
+                                        "",
+                                        "4",
+                                        "",
+                                        "3010",
+                                        "132709.2",
+                                        "132709.2",
+                                        "132709.2",
+                                        "132709.2",
+                                        "300000",
+                                        "300000",
+                                        "75000",
+                                        "75000",
+                                        OrderFactory.creaItemVat(
+                                                        "19",
+                                                        "25214.748",
+                                                        "300000",
+                                                        "25214.748",
+                                                        "25214.748"))));
 
-                                marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-                                marshaller.setProperty("com.sun.xml.bind.xmlDeclaration", false);
-                                marshaller.setProperty("com.sun.xml.bind.xmlHeaders",
-                                                "<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+                        OrderRequest orderRequest = OrderFactory.creatOrderRequest(
+                                        "prod",
+                                        1,
+                                        OrderFactory.creatOrder(
+                                                        OrderFactory.createShop(1),
+                                                        OrderFactory.createHeader(
+                                                                        "9190",
+                                                                        "01",
+                                                                        "01",
+                                                                        "ZTA",
+                                                                        "R01",
+                                                                        "ND",
+                                                                        "Z098",
+                                                                        "SC1002906810",
+                                                                        "",
+                                                                        "2022-06-15T12:00:00",
+                                                                        OrderFactory.createPaymentDetail(
+                                                                                        "",
+                                                                                        "",
+                                                                                        "",
+                                                                                        "300000",
+                                                                                        "",
+                                                                                        "",
+                                                                                        "",
+                                                                                        ""),
+                                                                        OrderFactory.createHeaderPrice(
+                                                                                        "COP",
+                                                                                        "300000",
+                                                                                        "300000",
+                                                                                        "300000",
+                                                                                        "300000",
+                                                                                        "300000",
+                                                                                        "19",
+                                                                                        "60733.748",
+                                                                                        "0.00")),
+                                                        OrderFactory.createCustomer(
+                                                                        "00097570",
+                                                                        "B2C",
+                                                                        "Cedula de Ciudadania",
+                                                                        "427633611",
+                                                                        "01",
+                                                                        OrderFactory.createBillingAddress(
+                                                                                        "LUZ",
+                                                                                        "RESTREPO",
+                                                                                        "",
+                                                                                        "CR 27 D No 34DD SUR-44 AP 801 ED REFUGIO VERDE BR LA INMACULADA",
+                                                                                        "",
+                                                                                        "",
+                                                                                        "",
+                                                                                        "ANTIOQUIA",
+                                                                                        "",
+                                                                                        "",
+                                                                                        "",
+                                                                                        "ENVIGADO",
+                                                                                        "",
+                                                                                        "CO",
+                                                                                        "es",
+                                                                                        "jdazap@choucairtesting.com",
+                                                                                        "3204514446",
+                                                                                        "19640625"),
+                                                                        OrderFactory.createShippingAddress(
+                                                                                        "LUZ",
+                                                                                        "RESTREPO",
+                                                                                        "",
+                                                                                        "CR 27 D No 34DD SUR-44 AP 801 ED REFUGIO VERDE BR LA INMACULADA",
+                                                                                        "",
+                                                                                        "Edificio",
+                                                                                        "",
+                                                                                        "ANTIOQUIA",
+                                                                                        "",
+                                                                                        "",
+                                                                                        "",
+                                                                                        "ENVIGADO",
+                                                                                        "",
+                                                                                        "CO",
+                                                                                        "es",
+                                                                                        "jdazap@choucairtesting.com",
+                                                                                        "3146170237")),
+                                                        items));
 
-                                items.add((OrderFactory.creaItem(
-                                                "1",
-                                                "",
-                                                "",
-                                                "ME001231.08",
-                                                "HEETS AMBERSEL S50 PRI 20 SLI",
-                                                "ME001231.08",
-                                                "",
-                                                "4",
-                                                "",
-                                                "3010",
-                                                "132709.2",
-                                                "132709.2",
-                                                "132709.2",
-                                                "132709.2",
-                                                "300000",
-                                                "300000",
-                                                "75000",
-                                                "75000",
-                                                OrderFactory.creaItemVat(
-                                                                "19",
-                                                                "25214.748",
-                                                                "300000",
-                                                                "25214.748",
-                                                                "25214.748"))));
+                        JAXBController.marshallXML(OrderRequest.class, orderRequest, file);
 
-                                OrderRequest orderRequest = OrderFactory.creatOrderRequest(
-                                                "prod",
-                                                1,
-                                                OrderFactory.creatOrder(
-                                                                OrderFactory.createShop(1),
-                                                                OrderFactory.createHeader(
-                                                                                "9190",
-                                                                                "01",
-                                                                                "01",
-                                                                                "ZTA",
-                                                                                "R01",
-                                                                                "ND",
-                                                                                "Z098",
-                                                                                "SC1002906810",
-                                                                                "",
-                                                                                "2022-06-15T12:00:00",
-                                                                                OrderFactory.createPaymentDetail(
-                                                                                                "",
-                                                                                                "",
-                                                                                                "",
-                                                                                                "300000",
-                                                                                                "",
-                                                                                                "",
-                                                                                                "",
-                                                                                                ""),
-                                                                                OrderFactory.createHeaderPrice(
-                                                                                                "COP",
-                                                                                                "300000",
-                                                                                                "300000",
-                                                                                                "300000",
-                                                                                                "300000",
-                                                                                                "300000",
-                                                                                                "19",
-                                                                                                "60733.748",
-                                                                                                "0.00")),
-                                                                OrderFactory.createCustomer(
-                                                                                "00097570",
-                                                                                "B2C",
-                                                                                "Cedula de Ciudadania",
-                                                                                "427633611",
-                                                                                "01",
-                                                                                OrderFactory.createBillingAddress(
-                                                                                                "LUZ",
-                                                                                                "RESTREPO",
-                                                                                                "",
-                                                                                                "CR 27 D No 34DD SUR-44 AP 801 ED REFUGIO VERDE BR LA INMACULADA",
-                                                                                                "",
-                                                                                                "",
-                                                                                                "",
-                                                                                                "ANTIOQUIA",
-                                                                                                "",
-                                                                                                "",
-                                                                                                "",
-                                                                                                "ENVIGADO",
-                                                                                                "",
-                                                                                                "CO",
-                                                                                                "es",
-                                                                                                "jdazap@choucairtesting.com",
-                                                                                                "3204514446",
-                                                                                                "19640625"),
-                                                                                OrderFactory.createShippingAddress(
-                                                                                                "LUZ",
-                                                                                                "RESTREPO",
-                                                                                                "",
-                                                                                                "CR 27 D No 34DD SUR-44 AP 801 ED REFUGIO VERDE BR LA INMACULADA",
-                                                                                                "",
-                                                                                                "Edificio",
-                                                                                                "",
-                                                                                                "ANTIOQUIA",
-                                                                                                "",
-                                                                                                "",
-                                                                                                "",
-                                                                                                "ENVIGADO",
-                                                                                                "",
-                                                                                                "CO",
-                                                                                                "es",
-                                                                                                "jdazap@choucairtesting.com",
-                                                                                                "3146170237")),
-                                                                items));
+                        JOptionPane.showMessageDialog(null, "Creación de XML completada");
 
-                                marshaller.marshal(orderRequest, file);
-
-                                JOptionPane.showMessageDialog(null, "Creación de XML completada");
-
-                        } catch (JAXBException e) {
-                                e.printStackTrace();
-                        }
                 } else if (decider == 2) {
-                        try {
-                                File file = new File("read-orders/eCommRRP.xml");
 
-                                JAXBContext context = JAXBContext.newInstance(OrderRequest.class);
+                        File file = new File("read-orders/order_02035004017.xml");
 
-                                Unmarshaller unmarshaller = context.createUnmarshaller();
+                        OrderRequest orderRequest = JAXBController.unmarshallXML(OrderRequest.class, file);
 
-                                OrderRequest orderRequest = (OrderRequest) unmarshaller.unmarshal(file);
-
-                                System.out.println(orderRequest.getOrders().get(0).getHeaders().get(0).getOrderNo());
-                                System.out.println(orderRequest);
-                        } catch (JAXBException e) {
-                                e.printStackTrace();
-                        }
+                        System.out.println(orderRequest.toString());
+                        System.out.println(orderRequest.getOrders().get(0).getHeaders().get(0).getOrderNo());
 
                         JOptionPane.showMessageDialog(null, "Lectura de XML completada");
                 } else if (decider == 3) {
-                        for (int i = 1; i < 71; i++) {
-                                try {
+                        for (int i = 1; i < 7; i++) {
 
-                                        File file = new File("read-orders/Original/orderSC (" + i + ").xml");
+                                File file = new File("read-orders/Original/order (" + i + ").xml");
 
-                                        JAXBContext context = JAXBContext.newInstance(OrderRequest.class);
+                                OrderRequest orderRequest = JAXBController.unmarshallXML(OrderRequest.class, file);
 
-                                        Unmarshaller unmarshaller = context.createUnmarshaller();
+                                File saveFile = new File("read-orders/Modified/order_"
+                                                + orderRequest.getOrders().get(0).getHeaders().get(0)
+                                                                .getOrderNo()
+                                                + ".xml");
 
-                                        OrderRequest orderRequest = (OrderRequest) unmarshaller.unmarshal(file);
+                                orderRequest.getOrders().get(0).getCustomers().get(0).getBillingAddresses()
+                                                .get(0)
+                                                .setBillingEmail("diana.gomez@pmi.com");
+                                orderRequest.getOrders().get(0).getCustomers().get(0).getBillingAddresses()
+                                                .get(0)
+                                                .setBillingTelNo("3146170237");
 
-                                        File saveFile = new File("read-orders/Modified/Premium Delivery/order_SC"
-                                                        + orderRequest.getOrders().get(0).getHeaders().get(0)
-                                                                        .getOrderNo()
-                                                        + ".xml");
+                                orderRequest.getOrders().get(0).getCustomers().get(0).getShippingAdresses()
+                                                .get(0)
+                                                .setShippingEmail("diana.gomez@pmi.com");
+                                orderRequest.getOrders().get(0).getCustomers().get(0).getShippingAdresses()
+                                                .get(0)
+                                                .setShippingTelNo("3146170237");
 
-                                        orderRequest.getOrders().get(0).getCustomers().get(0).getBillingAddresses()
-                                                        .get(0)
-                                                        .setBillingEmail("diana.gomez@pmi.com");
-                                        orderRequest.getOrders().get(0).getCustomers().get(0).getBillingAddresses()
-                                                        .get(0)
-                                                        .setBillingTelNo("3146170237");
+                                orderRequest.getOrders().get(0).getHeaders().get(0)
+                                                .setOrderTimestamp("2022-06-15T12:00:00");
 
-                                        orderRequest.getOrders().get(0).getCustomers().get(0).getShippingAdresses()
-                                                        .get(0)
-                                                        .setShippingEmail("diana.gomez@pmi.com");
-                                        orderRequest.getOrders().get(0).getCustomers().get(0).getShippingAdresses()
-                                                        .get(0)
-                                                        .setShippingTelNo("3146170237");
+                                JAXBController.marshallXML(OrderRequest.class, orderRequest, saveFile);
 
-                                        orderRequest.getOrders().get(0).getHeaders().get(0)
-                                                        .setOrderTimestamp("2022-06-15T12:00:00");
+                                System.out.println("Order "
+                                                + orderRequest.getOrders().get(0).getHeaders().get(0)
+                                                                .getOrderNo()
+                                                + " Modificada - Iteración " + i);
 
-                                        Marshaller marshaller = context.createMarshaller();
-                                        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-                                        marshaller.setProperty("com.sun.xml.bind.xmlDeclaration", false);
-                                        marshaller.setProperty("com.sun.xml.bind.xmlHeaders",
-                                                        "<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
-
-                                        marshaller.marshal(orderRequest, saveFile);
-
-                                        System.out.println("Order "
-                                                        + orderRequest.getOrders().get(0).getHeaders().get(0)
-                                                                        .getOrderNo()
-                                                        + " Modificada - Iteración " + i);
-
-                                } catch (JAXBException e) {
-                                        e.printStackTrace();
-                                        System.out.println("Iteración " + i + " fallida");
-                                }
                         }
                         JOptionPane.showMessageDialog(null, "Modificación exitosa");
 
